@@ -3,12 +3,12 @@ info:
   title: OpenAPI definition
   version: v0
 servers:
-- url: http://localhost:8080
+  - url: http://localhost:8080
 paths:
   /api/v1/persons:
     get:
       tags:
-      - Person REST API operations
+        - Person REST API operations
       summary: Get all Persons
       operationId: listPersons
       responses:
@@ -22,7 +22,7 @@ paths:
                   $ref: '#/components/schemas/PersonResponse'
     post:
       tags:
-      - Person REST API operations
+        - Person REST API operations
       summary: Create new Person
       operationId: createPerson
       requestBody:
@@ -49,16 +49,16 @@ paths:
   /api/v1/persons/{id}:
     get:
       tags:
-      - Person REST API operations
+        - Person REST API operations
       summary: Get Person by ID
       operationId: getPerson
       parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: integer
-          format: int32
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
       responses:
         "200":
           description: Person for ID
@@ -74,31 +74,31 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
     delete:
       tags:
-      - Person REST API operations
+        - Person REST API operations
       summary: Remove Person by ID
       operationId: editPerson_1
       parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: integer
-          format: int32
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
       responses:
         "204":
           description: Person for ID was removed
     patch:
       tags:
-      - Person REST API operations
+        - Person REST API operations
       summary: Update Person by ID
       operationId: editPerson
       parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: integer
-          format: int32
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
       requestBody:
         content:
           application/json:
@@ -137,7 +137,7 @@ components:
             type: string
     PersonRequest:
       required:
-      - name
+        - name
       type: object
       properties:
         name:
@@ -151,8 +151,8 @@ components:
           type: string
     PersonResponse:
       required:
-      - id
-      - name
+        - id
+        - name
       type: object
       properties:
         id:
