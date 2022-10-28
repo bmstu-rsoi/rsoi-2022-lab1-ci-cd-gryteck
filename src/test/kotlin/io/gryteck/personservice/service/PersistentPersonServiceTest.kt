@@ -102,7 +102,7 @@ internal class PersistentPersonServiceTest {
         val givenRequest = create(PatchPersonRequestMother.empty()) {
             name = givenName
         }
-        val savedPerson = create(PersonEntityMother.alex()) {
+        val savedPerson = create(PersonEntityMother.aidana()) {
             id = givenId
         }
         val expected = savedPerson.toPersonResponse().copy(name = givenName)
