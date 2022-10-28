@@ -76,7 +76,7 @@ internal class PersistentPersonServiceTest {
     @Test
     fun `getPerson - calls PersonRepository_findById and returns the same person returned from repository`() {
         // Arrange
-        val givenPersonEntity = PersonEntityMother.alex().build()
+        val givenPersonEntity = PersonEntityMother.aidana().build()
         coEvery { _personRepository.findById(givenPersonEntity.id) } returns givenPersonEntity
         val expected = givenPersonEntity.toPersonResponse()
 
