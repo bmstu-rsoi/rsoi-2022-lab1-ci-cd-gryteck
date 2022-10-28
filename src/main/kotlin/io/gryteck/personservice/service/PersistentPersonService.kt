@@ -6,7 +6,7 @@ import io.gryteck.personservice.dto.PersonResponse
 import io.gryteck.personservice.exception.EntityNotFoundException
 import io.gryteck.personservice.mapper.toPersonEntity
 import io.gryteck.personservice.mapper.toPersonResponse
-import io.grgryteckyteck.personservice.repository.PersonRepository
+import io.gryteck.personservice.repository.PersonRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import org.springframework.stereotype.Service
