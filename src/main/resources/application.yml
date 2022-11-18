@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: person-service
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/persons
+    password: test
+    username: program
+  webflux:
+    base-path: /api/v1
+  jackson:
+    default-property-inclusion: non_null
+
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+        r2dbc: debug
+
+server:
+  port: ${PORT:8080}
