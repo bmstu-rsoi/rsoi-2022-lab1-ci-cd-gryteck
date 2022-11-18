@@ -2,10 +2,10 @@ name: GitHub Classroom Workflow
 on:
   push:
     branches:
-      - master
+      - dev2(actual)
   pull_request:
     branches:
-      - master
+      - dev2(actual)
 jobs:
   build:
     name: Autograding
