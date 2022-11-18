@@ -219,6 +219,7 @@ gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
 
 # Cache of project
 .gradletasknamecache
@@ -1234,3 +1235,6 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+
+# docker-compose
+docker-compose/**/*.jar
