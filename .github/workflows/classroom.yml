@@ -11,7 +11,7 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -40,13 +40,12 @@ jobs:
           usedocker: true
 
       - name: Run API Tests
-        id: run-newman
-        uses: anthonyvscode/newman-action@v1
+        uses: matt-ball/newman-action@master
         with:
           collection: postman/[inst] Lab1.postman_collection.json
           environment: postman/[inst][heroku] Lab1.postman_environment.json
-          delayRequest: 50
-          reporters: cli
+          delayRequest: 100
+          reporters: '[ "cli" ]'
 
       - uses: education/autograding@v1
         id: autograder
