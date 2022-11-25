@@ -100,7 +100,11 @@ def delete_person(person_id):
 
 
 port = 8080
-
+herokuPort = os.environ.get('PORT')
+if herokuPort != None:
+    port = herokuPort
+if len(sys.argv) > 1:
+    port = int(sys.argv[1])
 
 
 if __name__ == '__main__':
